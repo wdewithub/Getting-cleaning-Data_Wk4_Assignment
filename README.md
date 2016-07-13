@@ -14,4 +14,7 @@ Both subdirectories contain the actual raw data we'll process with the run_analy
 * X_group file: dataset with the 561 calculated features
 * Y_group file: the labels of the acitivity performed
 
-##
+##Linked scripts
+
+The run_analysis script calls functions included in separate script files:
+* install_load: checks whether a required package is installed. If not, he will first install the package and then load it. 
