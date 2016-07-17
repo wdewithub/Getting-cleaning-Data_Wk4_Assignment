@@ -104,6 +104,6 @@ sel_tidy <- gather(overall_sel,key=feature,value=value, -(subjectid:activity))
 ##after which we use the spread function to convert the features back into true variables
 sel_tidy <- sel_tidy %>% group_by(subjectid, group, activity, feature) %>% summarize(average=mean(value)) %>% spread(key=feature,value=average)
 ##Thirdly, write the tidied dataset into a pipe separated flat file
-write.table(x=sel_tidy,file="./tidied_dataset",sep="|", col.names=TRUE, row.names=FALSE)
+write.table(x=sel_tidy,file="./tidied_dataset.txt",sep="|", col.names=TRUE, row.names=FALSE)
 ##Finally, clean up your memory in deleting overall and overall_sel
 rm(overall, overall_sel)
